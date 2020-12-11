@@ -1,0 +1,32 @@
+[
+	{
+		"model": "api.Enterprise",
+		"id": 1,
+		"fields":{"name": "SSAFY"}
+	},
+	{
+		"model": "api.Task",
+		"id": 1,
+		"fields":{"name": "경영솔루션 운영"}
+	},
+	{
+		"model": "api.Task",
+		"id": 2,	
+		"fields":{"name": "영업/마케팅"}
+	},
+	{
+		"model": "api.Task",
+		"id": 3,
+		"fields":{"name": "SW 개발"}
+	},
+	{
+		"model": "api.Task",
+		"id": 4,
+		"fields":{"name": "UI / UX 디자인"}
+	},
+	{
+		"model": "api.Task",
+		"id": 5,
+		"fields":{"name": "경영지원"}
+	}
+]
