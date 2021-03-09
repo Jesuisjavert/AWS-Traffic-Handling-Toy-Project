@@ -37,8 +37,7 @@
 
           <p>
            제가 구현한 웹 어플리케이션 아키텍쳐의 구조는 다음과 같습니다.<br>
-           PT 주제의 요구조건은 다음과 같습니다.<br> 1) Public Cloud Web Service System Architecture<br> 2) 고객사별 Route DNS 처리 <br>3) 트래픽 분산<br>
-           <br>이를 위해<br>
+           <br>기본적으론 대용량 트래픽에 대응하기 위해 이렇게 설계했습니다.<br>
            1) EC2, WEB서버, WAS , S3 , CloudFront 를 이용해 시스템을 구축했습니다.<br>
            Django - Backend API WAS / Vue(Vuetify) -  Frontend Web Server / Nginx / Gunicorn 배포<br> 
            2) AWS Route 53을 이용해, jesuisjavert.com 이라는 도메인을 구입하고, 하위 서브넷을 지정해 awstest.jesuisjavert.com 으로 포트를 연결했습니다. <br>
@@ -147,7 +146,7 @@
             <h3>옆의 사진은 슬라이드 입니다.</h3>
            AWS의 Route 53 기능을 이용해 DNS 서버와 EC2 인스턴스를 연결했습니다.<br>
            제 아이디인 jesuisjavert.com 을 구매했고, 그 DNS 밑에 awstest.jesuisjavert.com 레코드를 연결했습니다 <br>
-           Route 53 기능을 통해, recruiter.co.kr 밑에 xxxx.recruiter.co.kr 과 같은 서브넷을 두는 것이 가능해집니다. <br>
+           Route 53 기능을 통해, jesuisjavert.com 밑에 xxxx.jesuisjavert.com 과 같은 서브넷을 두는 것이 가능해집니다. <br>
           </p>
 
           
@@ -165,12 +164,12 @@
          <VueSlickCarousel v-bind="settings">
           <div>
             <v-img
-          :src="require('@/assets/sli6.png')"
+          :src="require('@/assets/newsl1.png')"
           />
           </div>
           <div>
             <v-img
-          :src="require('@/assets/sli1.png')"
+          :src="require('@/assets/newsl3.png')"
           />
           </div>
         </VueSlickCarousel>
@@ -210,12 +209,27 @@
         <VueSlickCarousel v-bind="settings">
           <div>
             <v-img
-          :src="require('@/assets/sli7.png')"
+          :src="require('@/assets/newsl4.png')"
           />
           </div>
           <div>
             <v-img
-          :src="require('@/assets/sli5.png')"
+          :src="require('@/assets/newsl5.png')"
+          />
+          </div>
+          <div>
+            <v-img
+          :src="require('@/assets/newsl6.png')"
+          />
+          </div>
+          <div>
+            <v-img
+          :src="require('@/assets/newsl8.png')"
+          />
+          </div>
+          <div>
+            <v-img
+          :src="require('@/assets/newsl9.png')"
           />
           </div>
         </VueSlickCarousel>
@@ -239,10 +253,11 @@
 
           <p>
             <h3>옆의 사진은 슬라이드 입니다.</h3>
-           트래픽이 증가할 것으로 예상되면, WEB서버나 WAS서버를 자동적으로 Scale Out 하여 트래픽을 감당해주는 서비스입니다.<br>
-            이를 이용하면, 트래픽 급증에 대비하여 큰 인프라를 구비할 필요 없고,<br>
-             채용 시즌이후 트래픽이 떨어졌을때는 자동으로 Scale이 줄어들어 관리 및 비용의 효율성을 높일 수 있는 기술입니다. <br>
-             이를 통해 클라우드 시스템이 가진 확장성과 유연성의 장점을 극대화 할 수 있습니다.<br>
+           트래픽이 증가할 것으로 예상되면, WEB서버 or WAS서버를 자동적으로 Scale Out 하여 트래픽을 감당해주는 서비스입니다.<br>
+           이를 이용하면, 트래픽 급증에 대비하여 큰 인프라를 구비할 필요 없고,<br>
+           채용 시즌이후 트래픽이 떨어졌을때는 자동으로 Scale이 줄어들어 관리 및 비용의 효율성을 높일 수 있는 기술입니다. <br>
+           이를 통해 클라우드 시스템이 가진 확장성과 유연성의 장점을 극대화 할 수 있습니다.<br>
+           Auto Scaling 조정 정책은 평균 PC 사용률이 80 이상일 경우에 새로운 EC2 서버를 Scale Out 하도록 설정했습니다.<br>
           </p>
         </v-responsive>
       </v-col>
@@ -313,11 +328,9 @@
           </h1>
 
           <p>
-            총 3일간의 짧은 시간동안, AWS에서 아직 적용하지 못했던 부분들을 새로 적용할 수 있어서 재미있었다.<br>
-            특히나, Auto-Scaling 기능은 소규모 유저를 산정하고 작업했던 내 프로젝트에선 굳이 쓸 필요성을 못 느꼈는데<br>
-            대용량 트래픽을 염두에 둔 시스템 아키텍처를 직접 내 손으로 구현해보는 것은 굉장히 흥미로웠으다. <br>
-            실제로 이 기술들을 구현하기 위해, AWS의 공식 문서를 참조하며 내 스스로도 많은 지식을 얻은 것 같아 뿌듯하다.<br>
-            추가적으로 아직 구현하지 못한 Elastic Cache나 Serverless 방식을 도입한 AWS Lambda도 도입해보고 싶다.<br>
+            대용량 트래픽을 염두에 둔 시스템 아키텍처를 직접 내 손으로 구현해보는 것은 굉장히 흥미로운 작업이었습니다. <br>
+            실제로 이 기술들을 구현하기 위해, AWS의 공식 문서를 참조하며 내 스스로도 많은 지식을 얻은 것 같아 뿌듯하고,<br>
+            추가적으로 아직 구현하지 못한 Elastic Cache나 Serverless 방식을 도입한 AWS Lambda도 도입해보고 싶습니다.<br>
           </p>
 
           <div class="signature">
