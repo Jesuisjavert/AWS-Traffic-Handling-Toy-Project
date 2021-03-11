@@ -42,11 +42,11 @@ AWS의 트래픽 분산 및 확장성 서비스 설계 및 구현, 배포 및 �
 
 ## :wrench: Tech Stack
 
-### 	Back-end : Django
+### 	- Back-end : Django
 
-### 	Front-end : Vue.js
+### 	- Front-end : Vue.js
 
-### 	배포 툴 : Nginx, gunicorn
+### 	- Deploy : Nginx, gunicorn
 
 
 
