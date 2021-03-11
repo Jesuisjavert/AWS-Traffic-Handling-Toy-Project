@@ -1,4 +1,4 @@
-<h1 align="center">AWS Huge Traffic Handling System Architecture Portfolio Page <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="48px"></h1>
+<h1 align="center">AWS Huge Traffic Handling System Architecture Portfolio<img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="48px"></h1>
 <p>
 </p>
 
@@ -13,8 +13,12 @@
 ## ✨ Description
 
 ```sh
-AWS 상에서의 웹서비스 시스템 아키텍처를 설계하는 과정은 서비스의 확장성 있고, 가용성 높은 운영 여건을 마련하기 위해 필수적이다. 본 프로젝트는 이론상으로 설계한 AWS의 여러가지 기능들을 실제로 사용해보고, 대용량 트래픽을 대처하는 고가용성의 시스템 아키텍쳐를 구축하고, 실제로 배포해보고, 모니터링툴을 사용해서 시스템이 잘 작동하는지 확인해보기 위함이다.
-페이지는 테스트 용도로, 동시간대에 많은 유저가 자신의 이력서에 여러장의 사진을 첨부할 때 (or 트래픽이 갑자기 증가할 시) 테스트 페이지가 받는 부하를 견뎌내도록 시나리오로 선정했습니다. 한번의 클릭으로 총 10번 DB에 저장되도록 의도적으로 코드를 작성했으며, 다중으로 업로드한 이미지는 Amazon S3 스토리지에 저장됩니다.
+ AWS 상에서의 웹서비스 시스템 아키텍처를 설계하는 과정은 서비스의 확장성 있고, 가용성 높은 운영 여건을 마련하기 위해 필수적입니다.
+ 본 프로젝트는 이론상으로 설계한 AWS의 여러가지 기능들을 실제로 사용해보고, 대용량 트래픽을 대처하는 고가용성의 시스템 아키텍쳐를 구축하고, 실제로 배포해보고, 모니터링툴을 사용해서 시스템이 잘 작동하는지 확인해보기 위함입니다.
+페이지는 테스트 용도로, 동시간대에 많은 유저가 자신의 이력서에 여러장의 사진을 첨부할 때
+(or 트래픽이 갑자기 증가할 시) 테스트 페이지가 받는 부하를 견뎌내도록 시나리오로 선정했습니다.
+한번의 클릭으로 총 10번 DB에 저장되도록 의도적으로 코드를 작성했으며,
+다중으로 업로드한 이미지는 Amazon S3 스토리지에 저장됩니다.
 ```
 
 
@@ -34,6 +38,14 @@ AWS의 트래픽 분산 및 확장성 서비스 설계 및 구현, 배포 및 �
 <center>
     <img src="./README.assets/sli0.png" alt="MODU"  align="center"/>
 </center>
+
+## :wrench: Tech Stack
+
+### 	Back-end : Django
+
+### 	Front-end : Vue.js
+
+### 	배포 툴 : Nginx, gunicorn
 
 
 
@@ -69,16 +81,6 @@ AWS의 트래픽 분산 및 확장성 서비스 설계 및 구현, 배포 및 �
     <img src="./README.assets/4.png" alt="MODU"/>
 </center>
 <br>
-
-## :wrench: Tech Stack
-
-### Tech Stack
-
-#### 	Back-end : Django
-
-#### 	Front-end : Vue.js
-
-#### 	배포 툴 : Nginx, gunicorn
 
 
 
@@ -117,7 +119,7 @@ AWS의 트래픽 분산 및 확장성 서비스 설계 및 구현, 배포 및 �
     <img src="./README.assets/newsl3.png" alt="MODU"/>
 </center>
 
- AWS LoadBalancer 설정입니다. 프로세스 하중이 낮은 웹서버로 트래픽을 분산 시켜, 서버 다운를 미연에 방지하고자 하는 방식입니다.  LoadBalancing 알고리즘은 Round-robin 방식을 차용하였습니다.
+1. AWS LoadBalancer 설정입니다. 프로세스 하중이 낮은 웹서버로 트래픽을 분산 시켜, 서버 다운를 미연에 방지하고자 하는 방식입니다.  LoadBalancing 알고리즘은 Round-robin 방식을 차용하였습니다.
 
 
 
@@ -131,19 +133,19 @@ AWS의 트래픽 분산 및 확장성 서비스 설계 및 구현, 배포 및 �
     <img src="./README.assets/newsl9.png" alt="MODU"/>
 </center>
 
-
-
-트래픽이 증가할 것으로 예상되면, WEB서버 or WAS서버를 자동적으로 Scale Out 하여 트래픽을 감당해주는 서비스입니다. 이를 이용하면, 트래픽 급증에 대비하여 큰 인프라를 구비할 필요 없고, 채용 시즌이후 트래픽이 떨어졌을때는 자동으로 Scale이 줄어들어 관리 및 비용의 효율성을 높일 수 있는 기술입니다. <br>
+​	1. Auto Scaling 그룹 설정입니다. 트래픽이 증가할 것으로 예상되면, WEB서버 or WAS서버를 자동적으로 Scale Out 하여 트래픽을 감당해주는 서비스입니다. 이를 이용하면, 트래픽 급증에 대비하여 큰 인프라를 구비할 필요 없고, 채용 시즌이후 트래픽이 떨어졌을때는 자동으로 Scale이 줄어들어 관리 및 비용의 효율성을 높일 수 있는 기술입니다. <br>
 
  이를 통해 클라우드 시스템이 가진 확장성과 유연성의 장점을 극대화 할 수 있습니다.  Auto Scaling 조정 정책은 평균 PC 사용률이 80 이상일 경우에 새로운 EC2 서버를 Scale Out 하도록 설정했습니다.
 
-### AWS CloudWatch DashBoard
+
+
+## AWS CloudWatch DashBoard
 
 <center>
     <img src="./README.assets/slide.png" alt="MODU"/>
 </center>
 
-​      AWS CloudWatch 기능을 이용해, 트래픽, CPU 사용률 등을 감시하고 분석할 수 있도록 했습니다.<br>
+​     1.  AWS CloudWatch 기능을 이용해, 트래픽, CPU 사용률 등을 감시하고 분석할 수 있도록 했습니다.<br>
 
 ### 총평:
 
@@ -180,4 +182,8 @@ Backend & Frontend & AWS System Architecturing : 🐯**Kang Donghoon**
 <hr>
 ## 📝 License
 
-Copyright © 2020  MODU's Health  <br>
+Copyright © 2020  to Kang Donghoon  <br>
+
+<center>
+    <img src="./README.assets/logo.png" alt="MODU"/>
+</center>
