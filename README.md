@@ -1,4 +1,4 @@
-<h1 align="center">AWS Huge Traffic Handling System Architecture Portfolio<img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="48px"></h1>
+<h1 align="center">AWS Traffic Handling System Architecture Portfolio<img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="48px"></h1>
 <p>
 </p>
 
