@@ -10,6 +10,10 @@
 
 
 
+## :clapper: [Live Demo Page](http://awstest.jesuisjavert.com)
+
+ (현재는 AWS 요금 문제로 Backend 서버는 꺼두고, Frontend 페이지만 볼 수 있는 상태입니다. 기능 X)
+
 ## ✨ Description
 
 ```sh
