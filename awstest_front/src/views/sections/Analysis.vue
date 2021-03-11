@@ -193,6 +193,7 @@
           <p>
             <h3>옆의 사진은 슬라이드 입니다.</h3>
             AWS LoadBalancer 설정입니다. <br>프로세스 하중이 낮은 웹서버로 트래픽을 분산 시켜, 서버 다운를 미연에 방지하고자 하는 방식입니다.
+            LoadBalancing 알고리즘은 Round-robin 방식을 차용하였습니다.
           </p>
 
         </v-responsive>
