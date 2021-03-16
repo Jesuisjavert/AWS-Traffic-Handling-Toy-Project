@@ -160,6 +160,16 @@ AWS의 트래픽 분산 및 확장성 서비스 설계 및 구현, 배포 및 �
 
 
 
+### 향후 발전 방향:
+
+<center>
+    <img src="./README.assets/repl.png" alt="MODU"/>
+</center>
+
+ANOS & AFOS 의 인연으로 만나게 된 네트워크 전문가 Cloudnet@ 팀의 가시다 님에게 피드백을 받았습니다. 추후 RDS Read Replica, Elastic Cache, DynamoDB, 대기열 시스템, Multi Domain 기능을 추가한 아키텍쳐를 구현해볼 예정입니다.
+
+
+
 ## :runner: Steps to run
 
 ### Backend
