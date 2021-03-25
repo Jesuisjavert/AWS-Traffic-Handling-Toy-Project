@@ -70,15 +70,19 @@ AWS의 트래픽 분산 및 확장성 서비스 설계 및 구현, 배포 및 �
 <center>
     <img src="./README.assets/2.png" alt="MODU"/>
 </center>
-
+센션별 독립된 컴포넌트 코드 작성으로 반응형 웹페이지 구성
 
 <br>
 
-### 3. 회원가입 및 로그인 페이지
+### 3. 회원가입 및 이력서 제출 페이지
 
 <center>
-    <img src="./README.assets/3.png" alt="MODU"/>
+    <img src="./README.assets/slide123.png" alt="MODU"/>
 </center>
+
+다중 이미지 업로드 기능으로, 이력서 등록 클릭 1번에 10번 DB 등록 하도록 만들어,
+
+시스템 부하를 모니터링 할 수 있게 함
 
 <br>
 
